@@ -9,7 +9,9 @@
 # global exemple ceci est une variable globale
 # if = si
 # elif = sinon si
-# try = essaye except = si sa ne marche pas else = si sa marche
+# boucle for = pour
+# range = dans l' ensemble
+# try = essaye except = si sa ne marche pas eception else = si sa marche (try except else dans l' ordre)
 # while = boucle tant que, while not == tant que nest pas egal and = et or = ou
 # break = arretez une boucle
 # type() affiche la classe de la variable (String,object etc)
@@ -21,17 +23,36 @@
 # Ceci est un commentaire """ Ouverture/Fermeture d' un commentaire sur plusieurs ligne """
 
 Helloworld = "Hello World"
-print(Helloworld)
 nom = ""
 age = ""
 user = ""
-pi = 3.14
+taille = ""
+
+def demander_user():
+    global user
+    while user == "":
+        user = input("Veuillez entrez votre nom d' utilisateur pour vous connectez :")
+
+def demander_pass():
+    motdepass = ""
+    while not motdepass == "admin": # Ici on utilisera un mot de pass par defaut admin parametrable plus tard
+        motdepass = input("Veuillez entrez votre mot de pass pour vous connectez (admin) :")
+        try:
+           motdepass == "admin"
+        except:
+            print("Erreur : Mot de pass eronner .")
+    print("Le mot de pass " + motdepass + " est correct ! Connection en cours ...")
+    return motdepass
 
 def demander_nom():
     global nom
-    while nom == "":
-        nom = input("Quel est ton nom ? ")
-    print("Votre nom est " + nom)
+    while nom == "":    # Rajouter une vérification prenom en lettre et pas en chiffre
+        nom = input("Quel est ton prénom ? ")
+        try:
+            nom == ""
+        except:
+            print("Erreur : Vous devez rentrez votre prénom en entier !")
+    print("Votre prénom est " + nom)
 
 def demander_age():
     global age
@@ -53,39 +74,43 @@ def demander_age():
 
 def mineur_majeur():
     conditionage = int(age) > 18
-    conditionage2 = int(age) >= 50
-    conditionage3 = int(age) <= 10
-    if conditionage:
+    if conditionage and int(age) < 50:
         print ("Vous avez plus de 18 ans vous êtes majeur .")
-    elif int(age) == 18:
-        print ("Vous avez tout juste 18 ans .")
-    if conditionage2:
-        print ("Vous avez 50 ans ou plus vous êtes un senior !")
-    if conditionage3:
-        print ("Vous avez 10 ans ou moins vous êtes un enfant .")
-    else:
+    elif int(age) < 18 and int(age) > 10:
         print ("Vous avez moins de 18 ans vous êtes mineur .")
+    if int(age) == 18:
+        print ("Vous avez tout juste 18 ans .")
+    if int(age) >= 50:
+        print ("Vous avez 50 ans ou plus vous êtes un senior !")
+    if int(age) <= 10:
+        print ("Vous avez 10 ans ou moins vous êtes un enfant .")
+    if int(age) == 1:
+        print ("Vous avez 1 an vous êtes un enfant .")
+    if int(age) == 2:
+        print ("Vous avez 1 an vous êtes un enfant .")
+    return conditionage
 
-def demander_user():
-    global user
-    while user == "":
-        user = input("Veuillez entrez votre nom d' utilisateur pour vous connectez :")
-    print("Votre nom d' utilisateur est " + user)
-
-def demander_pass():
-    motdepass = ""
-    while not motdepass == "admin":
-        motdepass = input("Veuillez entrez le mot de pass pour vous connectez :")
+def taille():
+    global taille
+    while taille == "": # On demande a l' utilisateur sa taille
+        taille = input("Quel est votre taille ? ")
         try:
-           motdepass == "admin"
+            taille == ""
         except:
-            print("Mot de pass eronner .")
-    print("Le mot de pass " + motdepass + " est correct ! Connection en cours ...")
-    return motdepass
+            print("Erreur : Vous devez rentrez votre taille !")
+    print("Votre taille est de " + str(taille) + " m")
 
+def systemactivate():
+    for i in range(1, 4):
+        print("Noyau" + (i))
+
+demander_user()
+motdepass = demander_pass()
 demander_nom()
 demander_age()
 conditionage = mineur_majeur()
-demander_user()
-motdepass = demander_pass()
-print("Bienvenue dans votre programme Hello World .")
+taille()
+print("Bienvenue dans votre programme " + Helloworld + " " + nom + " ! ")
+print("Activation du systeme ..")
+systemactivate()
+print("Noyau activer .")
