@@ -67,7 +67,7 @@ def demander_age():
         print("L'an prochain vous aurez " + str(age_prochain) + " ans .")
         break
         demander_user()
-    while int(age) <= 0 or (int(age)>= 111):
+    while int(age) <= 0 or (int(age)>= 100):
         print("Vous avez mentit sur votre age vous dites avoir " + age + "ans ?")
         break
         demander_age()
@@ -92,7 +92,7 @@ def mineur_majeur():
 
 def taille():
     global taille
-    while taille == "": # On demande a l' utilisateur sa taille
+    while taille == "":
         taille = input("Quel est votre taille ? ")
         try:
             taille == ""
