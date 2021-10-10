@@ -12,7 +12,7 @@ user = ""
 def demander_user():
     global user
     while user == "":
-        user = Label(window, text="Veuillez entrez votre nom d' utilisateur pour vous connectez :")
+        user = Label(window, text="Veuillez entrez votre nom d' utilisateur :")
         user.pack()
         #Mise en place d'un widget de saisie
         userenter = StringVar()
@@ -22,4 +22,4 @@ def demander_user():
         #Mise en place d'un widget de bouton
         boutonuser = Button(window, text="Valider", width=10)
         boutonuser.pack()
-demander_user()
+        demander_user()
