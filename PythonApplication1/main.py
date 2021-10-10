@@ -1,4 +1,15 @@
 """ Programme apprentissage python"""
+import pygame
+
+#On importe les fichiers player.py et game.py et la librairie pygame
+
+from game import game
+from player import player
+
+if __name__ == '__main__':
+    pygame.init()
+    game = game()
+    game.run()
 
 # Variable string(str) chaine de caractere
 # Variable float(float) numérique nombre a virgule
@@ -22,7 +33,7 @@
 # print("Pour informations la valeur de pi est " + str(pi))
 # Ceci est un commentaire """ Ouverture/Fermeture d' un commentaire sur plusieurs ligne """
 
-Helloworld = "Hello World"
+Helloworld = "Python World"
 nom = ""
 age = ""
 user = ""
@@ -119,4 +130,16 @@ def options():
     print("1.")
     print("2.")
     print("3.")
-    print("4.")
+    print("4. Quittez le programme.")
+    global choice
+    while choice == "":
+        choice = input("Choisissez une option .")
+        try:
+            choice = ""
+        except:
+            print("Erreur : Vous devez choisir une option !")
+            while choice == 1:
+                while choice == 2:
+                    while choice == 3:
+                        while choice == 4:
+                            quit()
