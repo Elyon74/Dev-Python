@@ -3,12 +3,12 @@ import pygame
 
 #On importe les fichiers player.py et game.py et la librairie pygame
 
-from game import game
+from game import Game
 from player import player
 
 if __name__ == '__main__':
     pygame.init()
-    game = game()
+    game = Game()
     game.run()
 
 # Variable string(str) chaine de caractere
