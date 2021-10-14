@@ -1,4 +1,3 @@
-
 import pygame
 
 # Interface de Hub des points de vie du joueur
@@ -70,3 +69,41 @@ class interface(pygame.sprite.Sprite):
 
     def update(HPBar3):
         HPBar3.rect.topleft = HPBar3.position
+
+# Interface de Hub des golds du joueur
+
+    def __init__(GoldText, x, y):
+                 super().__init__()
+                 GoldText.sprite_sheet = pygame.image.load('asset\Gold\Sprite-Gold.png')
+                 GoldText.image = GoldText.get_image(0, 0)
+                 GoldText.image.set_colorkey([0, 0, 0])
+                 GoldText.rect = GoldText.image.get_rect()
+                 GoldText.position = [x, y]
+                 GoldText.feet = pygame.Rect(0, 0, GoldText.rect.width * 0.5, 12)
+
+    def get_GoldText1(GoldText,x, y):
+        GoldText1 = pygame.Surface([32, 32])
+        GoldText1.blit(GoldText.sprite_sheet, (0, 0), (x, y, 32, 32))
+        return GoldText1
+
+    def update(GoldText):
+        GoldText.rect.topleft = GoldText.position
+
+# Interface de Hub du Level du jouer
+
+    def __init__(LevelText, x, y):
+                 super().__init__()
+                 LevelText.sprite_sheet = pygame.image.load('asset\Gold\Sprite-Level.png')
+                 LevelText.image = LevelText.get_image(0, 0)
+                 LevelText.image.set_colorkey([0, 0, 0])
+                 LevelText.rect = LevelText.image.get_rect()
+                 LevelText.position = [x, y]
+                 LevelText.feet = pygame.Rect(0, 0, LevelText.rect.width * 0.5, 12)
+
+    def get_LevelText1(LevelText,x, y):
+        LevelText1 = pygame.Surface([32, 32])
+        LevelText1.blit(LevelText.sprite_sheet, (0, 0), (x, y, 32, 32))
+        return LevelText1
+
+    def update(LevelText):
+        LevelText.rect.topleft = LevelText.position
