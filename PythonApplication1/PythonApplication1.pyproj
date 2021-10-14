@@ -46,17 +46,24 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="asset\" />
+    <Folder Include="asset\Gold\" />
     <Folder Include="asset\HP\" />
+    <Folder Include="asset\Level\" />
     <Folder Include="asset\Sprite\" />
     <Folder Include="test\" />
     <Folder Include="tilemap\" />
     <Folder Include="__pycache__\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="asset\Gold\Sprite-Gold.png" />
     <Content Include="asset\HP\Sprite-HP.png" />
     <Content Include="asset\HP\Sprite-HP1.png" />
     <Content Include="asset\HP\Sprite-HP2.png" />
     <Content Include="asset\HP\Sprite-HP3.png" />
+    <Content Include="asset\Level\Sprite-Level.png" />
+    <Content Include="asset\Level\Sprite-Lvl1.png" />
+    <Content Include="asset\Level\Sprite-Lvl2.png" />
+    <Content Include="asset\Level\Sprite-Lvl3.png" />
     <Content Include="asset\Sprite\player.png" />
     <Content Include="tilemap\espace-violet-bleus.jpg" />
     <Content Include="tilemap\espace-violet-bleus.tsx" />

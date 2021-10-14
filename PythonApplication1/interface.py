@@ -93,7 +93,7 @@ class interface(pygame.sprite.Sprite):
 
     def __init__(LevelText, x, y):
                  super().__init__()
-                 LevelText.sprite_sheet = pygame.image.load('asset\Gold\Sprite-Level.png')
+                 LevelText.sprite_sheet = pygame.image.load('asset\Level\Sprite-Level.png')
                  LevelText.image = LevelText.get_image(0, 0)
                  LevelText.image.set_colorkey([0, 0, 0])
                  LevelText.rect = LevelText.image.get_rect()

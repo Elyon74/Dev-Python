@@ -18,13 +18,19 @@ class Game:
         map_data = pyscroll.data.TiledMapData(tmx_data)
         map_layer = pyscroll.orthographic.BufferedRenderer(map_data, self.screen.get_size())
         # Zoom sur la carte map_layer.zoom = 0
-        # On creer un joueur
-        self.player = player(500, 10)
-        self.walls = []
+        # On creer un joueur et le place dans la map puis les interfaces
+        self.player = player(500, 100)
+        self.HPText = interface(10,10)
+        self.HPBar1 = interface(60,10)
+        self.HPBar2 = interface(110,10)
+        self.HPBar3 = interface(160,10)
+        self.GoldText = interface(10,20)
+        self.LevelText = interface(60,20)
         # On creer un calque de la carte positionner en 1er dans la file de prioriter
         self.group = pyscroll.PyscrollGroup(map_layer=map_layer, default_layer=1)
         self.group.add(self.player)
 
+        self.walls = []
         for obj in tmx_data.objects:
             if obj.type == "collision":
                 self.walls.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
