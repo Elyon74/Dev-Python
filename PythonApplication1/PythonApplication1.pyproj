@@ -29,19 +29,41 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="main.py" />
-    <Compile Include="module1.py">
+    <Compile Include="game.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="game.py">
+    <Compile Include="interface.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="player.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test\main2.py" />
+    <Compile Include="test\module1.py" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.10" />
-    <InterpreterReference Include="Global|PythonCore|3.9" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="asset\" />
+    <Folder Include="asset\HP\" />
+    <Folder Include="asset\Sprite\" />
+    <Folder Include="test\" />
+    <Folder Include="tilemap\" />
+    <Folder Include="__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="asset\HP\Sprite-HP.png" />
+    <Content Include="asset\HP\Sprite-HP1.png" />
+    <Content Include="asset\HP\Sprite-HP2.png" />
+    <Content Include="asset\HP\Sprite-HP3.png" />
+    <Content Include="asset\Sprite\player.png" />
+    <Content Include="tilemap\espace-violet-bleus.jpg" />
+    <Content Include="tilemap\espace-violet-bleus.tsx" />
+    <Content Include="tilemap\map.tmx" />
+    <Content Include="__pycache__\game.cpython-310.pyc" />
+    <Content Include="__pycache__\interface.cpython-310.pyc" />
+    <Content Include="__pycache__\player.cpython-310.pyc" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

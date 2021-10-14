@@ -3,23 +3,25 @@ import pyscroll
 import pytmx
 
 from player import player
-#On importe les librairie de pygame
+from interface import interface
+
+# On importe les librairies et les class necessaire a pygame
 
 class Game:
     def __init__(self):
-        #Créer la fenètre du jeux
+        # Créer la fenètre du jeux
         self.screen = pygame.display.set_mode((800, 600))
-        ##On change le titre de la fenètre
+        ## On change le titre de la fenètre
         pygame.display.set_caption("PyGame World")
-        #Chargez la carte entre les parentheses le nom de la carte dans le dossier de la solution python
-        tmx_data = pytmx.util_pygame.load_pygame('map.tmx')
+        # Chargez la carte entre les parentheses le nom de la carte dans le dossier de la solution python
+        tmx_data = pytmx.util_pygame.load_pygame('tilemap\map.tmx')
         map_data = pyscroll.data.TiledMapData(tmx_data)
         map_layer = pyscroll.orthographic.BufferedRenderer(map_data, self.screen.get_size())
-        #Zoom sur la carte map_layer.zoom = 0
-        #On creer un joueur
-        self.player = player(400, 400)
+        # Zoom sur la carte map_layer.zoom = 0
+        # On creer un joueur
+        self.player = player(500, 10)
         self.walls = []
-        #On creer un calque de la carte positionner en 1er dans la file de prioriter
+        # On creer un calque de la carte positionner en 1er dans la file de prioriter
         self.group = pyscroll.PyscrollGroup(map_layer=map_layer, default_layer=1)
         self.group.add(self.player)
 
@@ -39,10 +41,10 @@ class Game:
         
     def run(self):
         clock = pygame.time.Clock()
-        ##Variable de boucle du jeux
+        # Variable de boucle du jeux
         Running = True
         while Running:
-            #On dessine le calque de la carte et on l' actualise dans la fenetre
+            # On dessine le calque de la carte et on l' actualise dans la fenetre
             self.handle_input()
             self.group.update()
             self.group.center(self.player.rect.center)
