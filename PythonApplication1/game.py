@@ -17,33 +17,36 @@ class Game:
         tmx_data = pytmx.util_pygame.load_pygame('tilemap\map.tmx')
         map_data = pyscroll.data.TiledMapData(tmx_data)
         map_layer = pyscroll.orthographic.BufferedRenderer(map_data, self.screen.get_size())
-        # Zoom sur la carte map_layer.zoom = 0
+        map_layer.zoom = 2
+        # Zoom sur la carte map_layer.zoom = 2
         # On creer un joueur et le place dans la map puis les interfaces
-        self.player = player(500, 100)
-        self.HPText = interface(10,10)
-        self.HPBar1 = interface(60,10)
-        self.HPBar2 = interface(110,10)
-        self.HPBar3 = interface(160,10)
-        self.GoldText = interface(10,20)
-        self.LevelText = interface(60,20)
-        # On creer un calque de la carte positionner en 1er dans la file de prioriter
-        self.group = pyscroll.PyscrollGroup(map_layer=map_layer, default_layer=1)
-        self.group.add(self.player)
+        player_position = tmx_data.get_object_by_name("player")
+        self.player = player(player_position.x, player_position.y)
+        # self.HPText = interface(10,10)
+        # self.HPBar1 = interface(60,10)
+        # self.HPBar2 = interface(110,10)
+        # self.HPBar3 = interface(160,10)
+        # self.GoldText = interface(10,20)
+        # self.LevelText = interface(60,20)
 
+        # On creer un calque de la carte
+        self.group = pyscroll.PyscrollGroup(map_layer=map_layer, default_layer=3)
+        self.group.add(self.player)
         self.walls = []
         for obj in tmx_data.objects:
             if obj.type == "collision":
                 self.walls.append(pygame.Rect(obj.x, obj.y, obj.width, obj.height))
+
     def handle_input(self):
         pressed = pygame.key.get_pressed()
         if pressed[pygame.K_UP]:
-            self.player.moveup()
+            self.player.move_up()
         elif pressed[pygame.K_DOWN]:
-            self.player.movedown()
+            self.player.move_down()
         elif pressed[pygame.K_LEFT]:
-            self.player.moveleft()
+            self.player.move_left()
         elif pressed[pygame.K_RIGHT]:
-            self.player.moveright()
+            self.player.move_right()
         
     def run(self):
         clock = pygame.time.Clock()

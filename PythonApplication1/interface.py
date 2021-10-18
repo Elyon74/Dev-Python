@@ -2,7 +2,7 @@ import pygame
 
 # Interface de Hub des points de vie du joueur
 class interface(pygame.sprite.Sprite):
-    def __init__(HPText, x, y):
+    """def __init__(HPText, x, y):
                  super().__init__()
                  HPText.sprite_sheet = pygame.image.load('asset\HP\Sprite-HP.png')
                  HPText.image = HPText.get_image(0, 0)
@@ -106,4 +106,4 @@ class interface(pygame.sprite.Sprite):
         return LevelText1
 
     def update(LevelText):
-        LevelText.rect.topleft = LevelText.position
+        LevelText.rect.topleft = LevelText.position"""

@@ -26,10 +26,10 @@ class player(pygame.sprite.Sprite):
 
      def move_down(self): self.position[1] += self.speed
 
-     def get_image(self,x, y):
+     def update(self):
+         self.rect.topleft = self.position
+
+     def get_image(self, x, y):
          image = pygame.Surface([32, 32])
          image.blit(self.sprite_sheet, (0, 0), (x, y, 32, 32))
          return image
-
-     def update(self):
-         self.rect.topleft = self.position
