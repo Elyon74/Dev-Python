@@ -2,6 +2,7 @@ import pygame
 
 # Sprite du joueur et gestion du joueur
 class player(pygame.sprite.Sprite):
+
      def __init__(self, x, y):
          super().__init__()
          # Sprite du joueur a charger

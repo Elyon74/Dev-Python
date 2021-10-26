@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>29c6dab1-6e12-443e-afb7-0af0c9175ad5</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>main.py</StartupFile>
+    <StartupFile>src\main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -28,18 +28,22 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="main.py" />
-    <Compile Include="game.py">
+    <Compile Include="src\main.py" />
+    <Compile Include="src\game.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="interface.py">
+    <Compile Include="src\interface.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="player.py">
+    <Compile Include="src\setup.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="test\main2.py" />
-    <Compile Include="test\module1.py" />
+    <Compile Include="src\tilemap.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\player.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.10" />
@@ -50,7 +54,7 @@
     <Folder Include="asset\HP\" />
     <Folder Include="asset\Level\" />
     <Folder Include="asset\Sprite\" />
-    <Folder Include="test\" />
+    <Folder Include="src\" />
     <Folder Include="tilemap\" />
     <Folder Include="__pycache__\" />
   </ItemGroup>
