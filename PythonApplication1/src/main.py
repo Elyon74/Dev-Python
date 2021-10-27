@@ -6,6 +6,7 @@ from src.game import Game
 from src.player import player
 from src.interface import interface
 from src.tilemap import mapmanager
+from src.tilemap import tilemap1
 
 # On lance le programme pygame
 if __name__ == '__main__':
