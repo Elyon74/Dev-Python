@@ -12,7 +12,7 @@ class Game:
     def __init__(self):
         self.running = True
         # Créer la fenètre du jeux
-        self.screen = pygame.display.set_mode((800, 600))
+        self.screen = pygame.display.set_mode((1024, 768))
         pygame.display.set_caption("PyGame World")
         # On creer un joueur et le place dans la map puis les interfaces
         self.player = player( 0, 0)
@@ -28,16 +28,17 @@ class Game:
     def handle_input(self):
         pressed = pygame.key.get_pressed()
 
+    
         if pressed[pygame.K_ESCAPE]:
             self.running = False
-        if pressed[pygame.K_UP]:
+        elif pressed[pygame.K_UP]:
             self.player.move_up()
         elif pressed[pygame.K_DOWN]:
             self.player.move_down()
-        elif pressed[pygame.K_LEFT]:
-            self.player.move_left()
         elif pressed[pygame.K_RIGHT]:
             self.player.move_right()
+        elif pressed[pygame.K_LEFT]:
+            self.player.move_left()
         
     def update(self):
         self.map_manager.update()

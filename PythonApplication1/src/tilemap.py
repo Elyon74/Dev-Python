@@ -40,7 +40,7 @@ class mapmanager:
         map_data = pyscroll.data.TiledMapData(tmx_data)
         map_layer = pyscroll.orthographic.BufferedRenderer(map_data, self.screen.get_size())
         # Zoom sur la carte map_layer.zoom = 2
-        map_layer.zoom = 2
+        # map_layer.zoom = 0
         walls = []
         for obj in tmx_data.objects:
             if obj.type == "collision":

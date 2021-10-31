@@ -106,11 +106,11 @@
 </data>
  </layer>
  <objectgroup id="2" name="Objects">
-  <object id="3" name="walls" type="collision" x="4" y="1565" width="3200" height="1610.26"/>
-  <object id="5" name="walls" type="collision" x="-100" y="7" width="1660" height="3200"/>
-  <object id="7" name="walls" type="collision" x="1650" y="4" width="1644.33" height="3200"/>
-  <object id="8" name="walls" type="collision" x="33.2121" y="-277.818" width="3200" height="1700"/>
-  <object id="10" name="player" x="1605" y="1550">
+  <object id="3" name="walls" type="collision" x="4" y="1700" width="3200" height="1600"/>
+  <object id="5" name="walls" type="collision" x="-100" y="7" width="1200" height="3200"/>
+  <object id="7" name="walls" type="collision" x="2000" y="7" width="1200" height="3200"/>
+  <object id="8" name="walls" type="collision" x="33.2121" y="-277.818" width="3200" height="1200"/>
+  <object id="10" name="player" x="1530" y="1600">
    <point/>
   </object>
  </objectgroup>

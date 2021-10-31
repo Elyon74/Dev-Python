@@ -39,6 +39,6 @@ class player(pygame.sprite.Sprite):
          self.feet.midbottom = self.rect.midbottom
 
      def get_image(self, x, y):
-         image = pygame.Surface([32, 32])
-         image.blit(self.sprite_sheet, (0, 0), (x, y, 32, 32))
+         image = pygame.Surface([320, 320])
+         image.blit(self.sprite_sheet, (0, 0), (x, y, 320, 320))
          return image
