@@ -6,7 +6,7 @@ class player(pygame.sprite.Sprite):
      def __init__(self, x, y):
          super().__init__()
          # Sprite du joueur a charger
-         self.sprite_sheet = pygame.image.load('asset\Sprite\player.png')
+         self.sprite_sheet = pygame.image.load('asset/Sprite/player.png')
          # Dimension de l' image
          self.image = self.get_image(0, 0)
          # Fond derriere limage vide

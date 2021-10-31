@@ -17,13 +17,13 @@ class Game:
         # On creer un joueur et le place dans la map puis les interfaces
         self.player = player( 0, 0)
         self.map_manager = mapmanager(self.screen, self.player)
+        self.interface = interface( 0, 0)
 
-        # self.HPText = interface(0,0)
-        # self.HPBar1 = interface(0,0)
-        # self.HPBar2 = interface(0,0)
-        # self.HPBar3 = interface(0,0)
-        # self.GoldText = interface(0,0)
-        # self.LevelText = interface(0,0)
+        # self.HPBar1 = interface( 0, 0)
+        # self.HPBar2 = interface( 0, 0)
+        # self.HPBar3 = interface( 0, 0)
+        # self.GoldText = interface( 0, 0)
+        # self.LevelText = interface( 0, 0)
 
     def handle_input(self):
         pressed = pygame.key.get_pressed()
