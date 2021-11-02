@@ -13,7 +13,7 @@ class Game:
         self.running = True
         # Créer la fenètre du jeux
         self.screen = pygame.display.set_mode((1024, 768))
-        pygame.display.set_caption("PyGame World")
+        pygame.display.set_caption("PySpace Shooter")
         # On creer un joueur et le place dans la map puis les interfaces
         self.player = player( 0, 0)
         self.map_manager = mapmanager(self.screen, self.player)
