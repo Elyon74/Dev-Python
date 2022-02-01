@@ -8,7 +8,7 @@ window = Tk()
 window.title("Python 3.9.10")
 window.geometry("480x360")
 window.minsize(480, 360)
-window. configure(bg='red')
+window.configure(bg='red')
 window.mainloop()
 user = ""
 
