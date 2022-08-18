@@ -3,7 +3,7 @@ import pygame
 from src.player import player
 from src.interface import interface
 from src.tilemap import mapmanager
-from src.tilemap import tilemap1
+from src.tilemap import tilemap
 
 # On importe les librairies et les class necessaire a pygame
 
