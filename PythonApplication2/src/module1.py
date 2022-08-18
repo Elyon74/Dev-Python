@@ -5,7 +5,7 @@ from tkinter import *
 #Création de la fenêtre et de son titre
 
 window = Tk()
-window.title("Python 3.10.4")
+window.title("Python 3.10.6")
 window.geometry("640x480")
 window.minsize(640, 480)
 window.configure(bg='red')
