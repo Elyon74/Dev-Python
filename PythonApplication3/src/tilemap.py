@@ -6,14 +6,12 @@ from dataclasses import dataclass
 @dataclass
 
 class tilemap:
-
     name: str
     walls: list[pygame.Rect]
     group: pyscroll.PyscrollGroup
     tmx_data: pytmx.TiledMap
 
 class mapmanager:
-
     def __init__(self, screen, player):
         self.maps = dict()
         self.screen = screen

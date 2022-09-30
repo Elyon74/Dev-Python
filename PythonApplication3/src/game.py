@@ -6,7 +6,6 @@ from src.tilemap import mapmanager
 
 class game:
     def __init__(self):
-
         self.running = True
         screen = pygame.display.set_mode((800, 600))
         pygame.display.set_caption("PythonRPG")
@@ -15,7 +14,6 @@ class game:
         self.map_manager = mapmanager(self.screen, self.player)
 
     def handle_input(self):
-
         pressed = pygame.key.get_pressed()
         if pressed[pygame.K_ESCAPE]:
             self.running = False
@@ -29,7 +27,6 @@ class game:
             self.player.move_left()
         
     def update(self):
-
         self.map_manager.update()
 
     def run(self):
@@ -48,7 +45,4 @@ class game:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.running = False
-                    
-            clock.tick(60)
-
-        pygame.quit()
+                    clock.tick(60)
