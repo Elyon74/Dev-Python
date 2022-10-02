@@ -22,7 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="src\main2.py" />
+    <Compile Include="src\console.py" />
     <Compile Include="src\module1.py" />
   </ItemGroup>
   <ItemGroup>
@@ -30,6 +30,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="hollow.jpg" />
+    <Content Include="ifrit.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
