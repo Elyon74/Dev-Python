@@ -87,9 +87,9 @@ def create1():
     labelweaponstat = Label(win1, text ="Une épée à lame courte légère à manier. +8 ATQ\n Une épée à lame longue et tranchante. +12 ATQ\n Une épée large à lame courbée. +18 ATQ\n",bg="black", foreground="white", font="Arial 8 bold")
     labelweaponstat.pack ()
     labelweaponstat.place(x=180, y=70)
-    boutonexitwin1 = tkinter.Button(win1, text = "Fermez la fenetre", command=win.destroy, bg="red", relief=RAISED, cursor="cross")
+    boutonexitwin1 = tkinter.Button(win1, text = "Fermez la fenetre", command=win1.destroy, bg="red", relief=RAISED, cursor="cross")
     boutonexitwin1.pack ()
-    boutonexitwin1.place(x=450, y=580)
+    boutonexitwin1.place(x=400, y=480)
 
 def create2():
     win2 = Toplevel(window)
@@ -98,6 +98,9 @@ def create2():
     win2.minsize(950, 600)
     win2.resizable(height=False, width=False)
     win2.configure(bg='black')
+    boutonexitwin2 = tkinter.Button(win2, text = "Fermez la fenetre", command=win2.destroy, bg="red", relief=RAISED, cursor="cross")
+    boutonexitwin2.pack ()
+    boutonexitwin2.place(x=400, y=480)
 
 def create3():
     win3 = Toplevel(window)
@@ -106,6 +109,9 @@ def create3():
     win3.minsize(950, 600)
     win3.resizable(height=False, width=False)
     win3.configure(bg='black')
+    boutonexitwin3 = tkinter.Button(win3, text = "Fermez la fenetre", command=win3.destroy, bg="red", relief=RAISED, cursor="cross")
+    boutonexitwin3.pack ()
+    boutonexitwin3.place(x=400, y=480)
 
 def create4():
     win4 = Toplevel(window)
@@ -126,9 +132,9 @@ def create4():
     labelchimera = Label(win4, text=" Ifrit la chimère du feu s' obtient au volcan de l' ifrit .", bg="black", foreground="red", font="Arial 10 bold")
     labelchimera.pack ()
     labelchimera.place(x=50, y=100)
-    boutonexitwin4 = tkinter.Button(win4, text = "Fermez la fenetre", command=win.destroy, bg="red", relief=RAISED, cursor="cross")
+    boutonexitwin4 = tkinter.Button(win4, text = "Fermez la fenetre", command=win4.destroy, bg="red", relief=RAISED, cursor="cross")
     boutonexitwin4.pack ()
-    boutonexitwin4.place(x=450, y=580)
+    boutonexitwin4.place(x=400, y=480)
 
 def create5():
     win5 = Toplevel(window)
@@ -137,14 +143,20 @@ def create5():
     win5.minsize(950, 600)
     win5.resizable(height=False, width=False)
     win5.configure(bg='black')
+    boutonexitwin5 = tkinter.Button(win5, text = "Fermez la fenetre", command=win5.destroy, bg="red", relief=RAISED, cursor="cross")
+    boutonexitwin5.pack ()
+    boutonexitwin5.place(x=400, y=480)
 
 def create6():
     win6 = Toplevel(window)
-    win6.title("Hollows Game Helper (Objects)")
+    win6.title("Hollows Game Helper (Boss/Ennemies)")
     win6.geometry("950x600")
     win6.minsize(950, 600)
     win6.resizable(height=False, width=False)
     win6.configure(bg='black')
+    boutonexitwin6 = tkinter.Button(win6, text = "Fermez la fenetre", command=win6.destroy, bg="red", relief=RAISED, cursor="cross")
+    boutonexitwin6.pack ()
+    boutonexitwin6.place(x=400, y=480)
 
 def menue():
     menue = Toplevel(window)
@@ -155,7 +167,10 @@ def menue():
     menue.configure(bg='white')
     labelmenue = Label(menue, text="Version 0.1", bg="white", font="Arial 15 bold")
     labelmenue.pack ()
-    labelmenue.place(x=60, y=35)
+    labelmenue.place(x=60, y=25)
+    boutonexitmenue = tkinter.Button(menue, text = "Fermez la fenetre", command=menue.destroy, bg="red", relief=RAISED, cursor="cross")
+    boutonexitmenue.pack ()
+    boutonexitmenue.place(x=60, y=60)
 
 #Mise en place des boutons
 bouton = tkinter.Button (text = "Database", command= create, bg="yellow", relief=RAISED, cursor="cross")
@@ -166,7 +181,7 @@ boutonexit.pack ()
 boutonexit.place(x=350, y=200)
 
 #Case a cocher
-checkbox = Checkbutton(window, text="Version simplifier", bg ="black", foreground="white", relief=RAISED, cursor="cross")
+checkbox = Checkbutton(window, text="Version complète", bg ="black", foreground="white", relief=RAISED, cursor="cross")
 checkbox.pack()
 checkbox.place(x=450, y=100)
 
@@ -177,6 +192,12 @@ labeldatabase.place(x=285, y=135)
 labelspoiler = Label(window, text="ATTENTION SPOILER !", bg="red")
 labelspoiler.pack()
 labelspoiler.place(x=335, y=165)
+labelgameversion = Label(window, text="Version actuelle du jeu : 0.1", bg="black", foreground="white")
+labelgameversion.pack()
+labelgameversion.place(x=575, y=525)
+labeldatabaseversion = Label(window, text="Version actuelle de la database : 0.1", bg="black", foreground="white")
+labeldatabaseversion.pack()
+labeldatabaseversion.place(x=575, y=550)
 
 #Image
 label1 = tkinter.Label(image=image)
