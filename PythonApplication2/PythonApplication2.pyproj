@@ -12,6 +12,7 @@
     <Name>PythonApplication2</Name>
     <RootNamespace>PythonApplication2</RootNamespace>
     <IsWindowsApplication>True</IsWindowsApplication>
+    <PublishUrl>D:\Anthony\Documents\Dev Python\</PublishUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>

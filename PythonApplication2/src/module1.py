@@ -51,6 +51,10 @@ def create():
     labeldatabaseboss = Label(win, text="Liste des Boss/Ennemies")
     labeldatabaseboss.pack ()
     labeldatabaseboss.place(x=300, y=250)
+    boutonlieu = tkinter.Button (win, text = "Lieu", command= create7, bg="red", relief=RAISED, cursor="cross")
+    labeldatabaselieu = Label(win, text="Liste des lieu")
+    labeldatabaselieu.pack ()
+    labeldatabaselieu.place(x=250, y=285)
     boutonexit = tkinter.Button (win, text = "Quitter la database", command=win.destroy, bg="red", relief=RAISED, cursor="cross")
     boutonweap.pack ()
     boutonweap.place(x=200, y=100)    
@@ -64,8 +68,10 @@ def create():
     boutonobj.place(x=200, y=220)
     boutonboss.pack()
     boutonboss.place(x=200, y=250)
+    boutonlieu.pack()
+    boutonlieu.place(x=200, y=285)
     boutonexit.pack ()
-    boutonexit.place(x=340, y=285)
+    boutonexit.place(x=340, y=340)
 
 # Database
 def create1():
@@ -157,6 +163,17 @@ def create6():
     boutonexitwin6 = tkinter.Button(win6, text = "Fermez la fenetre", command=win6.destroy, bg="red", relief=RAISED, cursor="cross")
     boutonexitwin6.pack ()
     boutonexitwin6.place(x=400, y=480)
+
+def create7():
+    win7 = Toplevel(window)
+    win7.title("Hollows Game Helper (Lieu)")
+    win7.geometry("950x600")
+    win7.minsize(950, 600)
+    win7.resizable(height=False, width=False)
+    win7.configure(bg='black')
+    boutonexitwin7 = tkinter.Button(win7, text = "Fermez la fenetre", command=win7.destroy, bg="red", relief=RAISED, cursor="cross")
+    boutonexitwin7.pack ()
+    boutonexitwin7.place(x=400, y=480)
 
 def menue():
     menue = Toplevel(window)
